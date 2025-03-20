@@ -2,12 +2,22 @@ import os
 import sys
 #zrobic zadania od 1 do 9 zadania i wrzucic na moodle
 # 10 i 11 dla chetnych
+'''
+7. Napisz program, który będzie przechowywał informacje o studentach w postaci słownika, każdy student powinien mieć przypisane imię, nazwisko, listę oceny.
+   Dane przechowuj w pliku tekstowym. Program powinien zawierać następujące funkcje: zapisanie danych do pliku i odczyt danych z pliku. 
+   Zademonstruj działanie programu poprzez zapis danych do pliku i odczyt ich. 
+ 
+8. Napisz program, który symuluje prostą książkę telefoniczną działającą na podstawie danych zapisanych w pliku CSV.Program powinien umożliwiać użytkownikowi:
+      a. Dodawanie nowych kontaktów (imię, nazwisko, numer telefonu),
+       b. Wyświetlanie wszystkich zapisanych kontaktów, 
+        c. Usuwanie wybranych kontaktów z książki telefonicznej. Wszystkie zmiany (dodawanie, usuwanie kontaktów) muszą być trwale zapisywane w pliku,
+           tak aby dane były dostępne po ponownym uruchomieniu programu. Zaprezentuj przykładowe działanie programu. 
+           
+9. Zapoznaj się z modułem CSV i przebuduj program z zadania 8 tak aby do zapisu i odczytu wykorzystywał metody z modułu CSV
+    szczegóły: https://www.google.com/url?q=https%3A%2F%2Fdocs.python.org%2F3%2Flibrary%2Fcsv.html 
+'''
 
-
-''' Napisz funkcję, która przyjmuje dwa argumenty: nazwę pliku oraz dane do zapisania. Funkcja powinna sprawdzić,
- czy plik o podanej nazwie istnieje. Jeżeli plik istnieje, funkcja powinna dopisać przekazane dane na końcu pliku. Jeżeli plik nie istnieje,
- funkcja powinna go stworzyć i zapisać w nim przekazane dane. przetestuj działanie funkcji na przykładowych danych. nie używaj do tego modułu os lub sys '''
-
+#zad 1
 def writeToFile():
     text = input("Podaj tekst : ")
     with open("plik.txt", "w") as file:
@@ -17,6 +27,7 @@ def writeToFile():
     file.write(binary_text)
     file.close()
 
+#zad 2
 def readFile(file_name):
     text = ""
     if ".bin" in file_name or ".dat" in file_name:
@@ -32,6 +43,7 @@ def readFile(file_name):
     else:
         print("zly format pliku")
 
+#zad 3
 def readWriteFile(file_name, text):
     if os.path.exists(file_name):
             with open(file_name, "a") as file:
@@ -40,6 +52,7 @@ def readWriteFile(file_name, text):
         with open(file_name, "w") as file:
             file.write(text)
 
+#zad 4
 def readingNumbers():
     while True:
         try:
@@ -48,7 +61,7 @@ def readingNumbers():
         except:
             print("bledna wartosc, podaj ponownie")
 
-
+#zad 5
 def readingOddEvenNumbers():
     while True:
         try:
@@ -63,6 +76,7 @@ def readingOddEvenNumbers():
         except:
             print("bledna wartosc, podaj ponownie")
 
+#zad 6
 def openingFileWithFinally(file_name):
     f = None
     try:
@@ -73,6 +87,7 @@ def openingFileWithFinally(file_name):
     finally:
         if f is not None:
             f.close()
+
 
 if __name__ == "__main__":
   #  writeToFile()
