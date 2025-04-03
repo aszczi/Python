@@ -4,13 +4,9 @@
  Gracz może podać całe słowo sprawdź czy podane słowo zgadza się z zagadką, jeżeli tak to poinformuj o poprawnym odgadnięciu, jeżeli nie to poinformuj o dalszych próbach.
  Program powinien zliczać po którym kroku gracz odgadł szukane słowo.'''
 from zad_06 import guess_word
-
-
-def print_hi(name):
-
-    print(f'Hi, {name}')
-
+from zad_09 import kolko_i_krzyzyk
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    guess_word()
+    #guess_word()
+    kolko_i_krzyzyk()

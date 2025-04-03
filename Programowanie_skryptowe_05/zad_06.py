@@ -6,7 +6,7 @@
 import random
 
 def guess_word():
-    words = ["butterfly", "mouse", "chamster", "cat", "dog"]
+    words = ["butterfly", "mouse", "hamster", "cat", "dog"]
     random_number = random.randint(0,4)
     random_word =words[random_number]
     letters_guessed = 0
@@ -38,5 +38,5 @@ def guess_word():
             else:
                 print("The word you guessed is not correctly\n")
     print(word_to_guess)
-    print("Congratulations you guessed the word correctly\n")
+    print(f"Congratulations you guessed the word correctly in {iterations} steps\n")
 
