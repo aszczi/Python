@@ -19,9 +19,11 @@ def kolko_i_krzyzyk():
     GamerX = True
     GamerO = False
     X_or_O = ""
-    while(continue_game):
-        i = int(input("podaj pole"))
-        column = i%3
+    iterations = 0
+    while(continue_game and iterations < 9):
+        iterations += 1
+        i = int(input("Enter the field\n"))
+        column = (i-1)%3
         row = (i-1)//3
         if(GamerO):
             GamerX = True
@@ -32,13 +34,66 @@ def kolko_i_krzyzyk():
             GamerO = True
             X_or_O = "X"
 
-        gameboard[row][column] = X_or_O
+        game_board[row][column] = X_or_O
 
         print(game_board[0])
         print(game_board[1])
         print(game_board[2])
 
-        if(game_board[0][0] == game_board[0][1] && game_board[0][0] == game_board[0][2]):
-            continue_game =False
-        #TODO dokonczyc
 
+        #rows
+        if (game_board[0][0] == "X" and game_board[0][1] == "X" and game_board[0][2] == "X"):
+            print("X wins")
+            continue_game = False
+        elif (game_board[1][0]== "X" and game_board[1][1]== "X" and game_board[1][2] == "X"):
+            print("X wins")
+            continue_game = False
+        elif (game_board[2][0] == "X" and game_board[2][1] == "X" and game_board[2][2] == "X"):
+            print("X wins")
+            continue_game = False
+            # columns
+        elif (game_board[0][0]  == "X" and game_board[1][0] == "X" and game_board[2][0] == "X"):
+            print("X wins")
+            continue_game = False
+        elif (game_board[0][1] == "X" and game_board[1][1] == "X" and game_board[2][1] == "X"):
+            print("X wins")
+            continue_game = False
+        elif (game_board[0][2] == "X" and game_board[1][2] == "X" and game_board[2][2] == "X"):
+            print("X wins")
+            continue_game = False
+            # crosses
+        elif (game_board[0][0] == "X" and game_board[1][1] == "X" and game_board[2][2] == "X"):
+            print("X wins")
+            continue_game = False
+        elif (game_board[0][2] == "X" and game_board[1][1] == "X" and game_board[2][0] == "X"):
+            print("X wins")
+            continue_game = False
+        #rows
+        elif game_board[0][0] == "O" and game_board[0][1] == "O" and game_board[0][2] == "O":
+            print("O wins")
+            continue_game = False
+        elif game_board[1][0] == "O" and game_board[1][1] == "O" and game_board[1][2] == "O":
+            print("O wins")
+            continue_game = False
+        elif game_board[2][0] == "O" and game_board[2][1] == "O" and game_board[2][2] == "O":
+            print("O wins")
+            continue_game = False
+        # columns
+        elif game_board[0][0] == "O" and game_board[1][0] == "O" and game_board[2][0] == "O":
+            print("O wins")
+            continue_game = False
+        elif game_board[0][1] == "O" and game_board[1][1] == "O" and game_board[2][1] == "O":
+            print("O wins")
+            continue_game = False
+        elif game_board[0][2] == "O" and game_board[1][2] == "O" and game_board[2][2] == "O":
+            print("O wins")
+            continue_game = False
+        #crosses
+        elif game_board[0][0] == "O" and game_board[1][1] == "O" and game_board[2][2] == "O":
+            print("O wins")
+            continue_game = False
+        elif game_board[0][2] == "O" and game_board[1][1] == "O" and game_board[2][0] == "O":
+            print("O wins")
+            continue_game = False
+
+    print("Game over")
