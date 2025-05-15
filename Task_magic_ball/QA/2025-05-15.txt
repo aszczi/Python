@@ -1,2 +1,3 @@
-Czy będzie dziś padać? : Na pewno nie!
-Jak się masz? : Nie wiem.
+Czy opóźnią się tramwaje? : Możliwe.
+Czy będzie dziś słonecznie? : Oczywiście, że tak!
+Czy będzie padać? : Wątpliwe.

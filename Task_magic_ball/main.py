@@ -3,7 +3,7 @@ import random
 import datetime
 
 answers = [
-    "Nie s˛adz˛e.",
+    "Nie sądzę.",
     "Oczywiście, że tak!",
     "Nie wiem.",
     "Zapytaj ponownie później.",
@@ -11,8 +11,8 @@ answers = [
     "Jest to prawdopodobne.",
     "Wszystko wskazuje na tak.",
     "Możliwe.",
-    "W˛atpliwe.",
-    "Bez w˛atpienia!",
+    "Wątpliwe.",
+    "Bez wątpienia!",
     "Nie licz na to.",
     "To pewne!"
 ]
